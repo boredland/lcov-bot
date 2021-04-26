@@ -1,0 +1,8 @@
+{
+  "eslint.packageManager": "yarn",
+  "eslint.validate": ["javascript", "typescript", "json"],
+  "files.autoSave": "onFocusChange",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true
+}

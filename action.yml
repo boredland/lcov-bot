@@ -1,0 +1,31 @@
+name: 'lcov-bot'
+
+description: "adds lcov summaries to prs"
+
+branding:
+  icon: "gift"
+  color: orange
+
+runs:
+  using: "node12"
+  main: "dist/index.js"
+
+inputs:
+  commit-ignore:
+    description: 'prefix of commits to ignore searching for comparison coverage'
+    required: false
+
+  lcov-paths:
+    description: 'comma-separated list of paths to the lcov-files (from root)'
+    required: false
+    default: "coverage/lcov.info"
+
+  threshold-absolute:
+    description: 'minimum allowed coverage percentage'
+    required: false
+    default: 70
+
+  threshold-relative:
+    description: 'minimum allowed coverage decrease relative to the target branch'
+    required: false
+    default: 0.1
